@@ -54,6 +54,64 @@ ll match(int src, int sink) {
 		while ((r = dfs(src, sink, 2e9))) ret += r;
 	}
 	return ret;
-}int board[101][101];pair<int, int> boardNum[101][101];int main() {
-	int n, m;	scanf("%d %d", &n, &m);	for (int i = 0; i < n; ++i) {		char msg[123];		scanf("%s", msg);		for (int j = 0; j < m; ++j)			if (msg[j] == '*') board[i][j] = 1;	}	int c = 1, r = 1;	for (int i = 0; i < n; ++i) {		for (int j = 0; j < m; ++j) {			if (board[i][j])				boardNum[i][j].first = c;			else if(j && board[i][j-1])				++c;			if (board[j][i])				boardNum[j][i].second = r;			else if (j && board[j - 1][i])				++r;		}		if (i && board[i][m - 1])			++c;		if(i && board[n - 1][i])			++r;	}	bool chk[101][101] = { 0 };	--c; --r;	for (int i = 0; i < n; ++i) {		for (int j = 0; j < m; ++j) {			int x = boardNum[i][j].first;			int y = boardNum[i][j].second;			if (chk[x][y]) continue;			else {				add_edge(x, y + c, 1);				chk[x][y] = 1;			}		}	}	for (int i = 1; i <= c; ++i)		add_edge(0, i, 1);	for (int i = 1; i <= r; ++i)		add_edge(i + c, r + c + 1, 1);	printf("%lld", match(0, r + c + 1));
+}
+int board[101][101];
+pair<int, int> boardNum[101][101];
+
+
+int main() {
+	int n, m;
+	scanf("%d %d", &n, &m);
+	for (int i = 0; i < n; ++i) {
+		char msg[123];
+		scanf("%s", msg);
+		for (int j = 0; j < m; ++j)
+			if (msg[j] == '*') board[i][j] = 1;
+	}
+	int c = 1, r = 1;
+	for (int i = 0; i < n; ++i) {
+		bool cp = 0;
+		for (int j = 0; j < m; ++j) {
+			if (board[i][j]) {
+				cp = 1;
+				boardNum[i][j].first = c;
+			}
+			else if (j && board[i][j - 1]) {
+				++c;
+				cp = 0;
+			}
+
+		}
+		if (cp)
+			++c;
+	}
+	for (int j = 0; j < m; ++j) {
+		bool rp = 0;
+		for (int i = 0; i < n; ++i) {
+			if (board[i][j]) {
+				rp = 1;
+				boardNum[i][j].second = r;
+			}
+			else if (i && board[i - 1][j]) {
+				rp = 0;
+				++r;
+			}
+		}
+		if (rp)
+			++r;
+	}
+	--c; --r;
+	for (int i = 0; i < n; ++i) {
+		for (int j = 0; j < m; ++j) {
+			int x = boardNum[i][j].first;
+			int y = boardNum[i][j].second;
+			if (x && y)
+				add_edge(x, y + c, 1);
+		}
+	}
+	for (int i = 1; i <= c; ++i)
+		add_edge(0, i, 1);
+	for (int i = 1; i <= r; ++i)
+		add_edge(i + c, r + c + 1, 1);
+	printf("%lld", match(0, r + c + 1));
 }
