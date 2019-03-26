@@ -2,3 +2,13 @@ opendb
 ipch
 obj
 exe
+*.log
+*.tlog
+*.pdb
+*.idb
+*.pdb
+*.ilk
+*.pdb
+*.db
+.vs/Algorithm_2019/v15/.suo
+*.opendb
