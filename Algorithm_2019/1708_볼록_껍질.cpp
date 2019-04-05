@@ -1,0 +1,59 @@
+#include <cstdio>
+#include <vector>
+#include <algorithm>
+using namespace std;
+struct Point {
+	int x, y;
+};
+Point a[200000];
+Point p;
+typedef long long ll;
+int ccw(Point p1, Point p2, Point p3) {
+	ll temp = (ll)(p2.x - p1.x)*(ll)(p3.y - p1.y) - (ll)(p3.x - p1.x)*(ll)(p2.y - p1.y);
+	if (temp > 0) {
+		return 1;
+	}
+	else if (temp < 0) {
+		return -1;
+	}
+	else {
+		return 0;
+	}
+}
+ll dist(Point p1, Point p2) {
+	ll d1 = (ll)(p1.x - p2.x);
+	ll d2 = (ll)(p1.y - p2.y);
+	return d1 * d1 + d2 * d2;
+}
+bool cmp(const Point &u, const Point &v) {
+	int temp = ccw(p, u, v);
+	if (temp == 0) {
+		return dist(p, u) <= dist(p, v);
+	}
+	else {
+		return temp == 1;
+	}
+}
+int main() {
+	int n;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) {
+		scanf("%d %d", &a[i].x, &a[i].y);
+	}
+	p = a[0];
+	for (int i = 1; i < n; i++) {
+		if (a[i].y < p.y || (a[i].y == p.y && a[i].x < p.x)) {
+			p = a[i];
+		}
+	}
+	sort(a, a + n, cmp);
+	vector<Point> s;
+	for (int i = 0; i < n; i++) {
+		while (s.size() >= 2 && ccw(s[s.size() - 2], s[s.size() - 1], a[i]) <= 0) {
+			s.pop_back();
+		}
+		s.push_back(a[i]);
+	}
+	printf("%d\n", s.size());
+	return 0;
+}

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="17010_Time_to_Decompress.cpp">
+    <ClCompile Include="7535_A_Bugs_Life.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
