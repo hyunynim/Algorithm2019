@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="7535_A_Bugs_Life.cpp">
+    <ClCompile Include="13015_별_찍기_23.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
