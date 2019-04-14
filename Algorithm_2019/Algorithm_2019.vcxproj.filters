@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="13015_별_찍기_23.cpp">
+    <ClCompile Include="20190413_Codeforces_Round_551(Div.2)\D.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
