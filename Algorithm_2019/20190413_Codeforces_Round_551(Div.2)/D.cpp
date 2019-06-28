@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include<cstdio>
 using namespace std;
 vector<int> adj[303030];
 vector<int> seq;

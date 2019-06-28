@@ -1,12 +1,9 @@
-﻿  D.cpp
-d:\develop\algorithm_2019\algorithm_2019\20190413_codeforces_round_551(div.2)\d.cpp(12): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-d:\develop\algorithm_2019\algorithm_2019\20190413_codeforces_round_551(div.2)\d.cpp(27): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\develop\algorithm_2019\algorithm_2019\20190413_codeforces_round_551(div.2)\d.cpp(29): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-d:\develop\algorithm_2019\algorithm_2019\20190413_codeforces_round_551(div.2)\d.cpp(31): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-d:\develop\algorithm_2019\algorithm_2019\20190413_codeforces_round_551(div.2)\d.cpp(45): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
-d:\develop\algorithm_2019\algorithm_2019\20190413_codeforces_round_551(div.2)\d.cpp(48): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
-d:\develop\algorithm_2019\algorithm_2019\20190413_codeforces_round_551(div.2)\d.cpp(50): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  d:\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+﻿  11571_분수를_소수로.cpp
+d:\develop\algorithm_2019\algorithm_2019\20190628_codeforces_round_571(div.2)\11571_분수를_소수로.cpp(36): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\develop\algorithm_2019\algorithm_2019\20190628_codeforces_round_571(div.2)\11571_분수를_소수로.cpp(48): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\develop\algorithm_2019\algorithm_2019\20190628_codeforces_round_571(div.2)\11571_분수를_소수로.cpp(55): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+d:\develop\algorithm_2019\algorithm_2019\20190628_codeforces_round_571(div.2)\11571_분수를_소수로.cpp(23): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+d:\develop\algorithm_2019\algorithm_2019\20190628_codeforces_round_571(div.2)\11571_분수를_소수로.cpp(29): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
   Algorithm_2019.vcxproj -> D:\Develop\Algorithm_2019\Debug\Algorithm_2019.exe
