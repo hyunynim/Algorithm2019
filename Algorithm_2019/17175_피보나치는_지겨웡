@@ -1,0 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+ll d[123] = {1, 1};
+ll mod = 1e9 + 7;
+int main(){
+        int n; scanf("%d", &n);
+        for(int i = 2; i<123; ++i){
+                d[i] = d[i-2] + d[i-1] + 1;
+                d[i] %= mod;
+        }
+        printf("%lld", d[n]);
+}
