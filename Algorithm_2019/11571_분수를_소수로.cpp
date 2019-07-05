@@ -1,82 +1,47 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<int> suf(string s) {
-	int len;
-	len = s.size();
-	vector<int> sufarr(len);
-	vector<int> g(len + 1);
-	for (int i = 0; i < len; ++i) {
-		g[i] = s[i];
-		sufarr[i] = i;
-	}
-	g[len] = -1;
-
-	for (int i = 1; i / 2 < len; i *= 2) {
-		auto cmp = [&](int u, int v) {
-			if (g[u] == g[v])
-				return g[u + i] < g[v + i];
-			else
-				return g[u] < g[v];
-		};
-		sort(sufarr.begin(), sufarr.end(), cmp);
-		vector<int> g2(len + 1);
-		g2[sufarr[0]] = 0;
-		g2[len] = -1;
-		for (int j = 1; j < len; ++j) {
-			if (cmp(sufarr[j - 1], sufarr[j]))
-				g2[sufarr[j]] = g2[sufarr[j - 1]] + 1;
-			else
-				g2[sufarr[j]] = g2[sufarr[j - 1]];
-		}
-		g = g2;
-	}
-	return sufarr;
-}
+int chk[10231];
+string d[1025][1025];
 int main() {
-	int t; scanf("%d", &t);
-	string str;
-	vector<int> pi;
+	ios_base::sync_with_stdio(false);
+	cin.tie(0); cout.tie(0);
+	int t; cin >> t;
 	while (t--) {
-		str.clear();
-		pi.clear();
-		int a, b; scanf("%d %d", &a, &b);
-		bool zero = 0;
-		printf("%d.", a / b);
-		while (str.size() < 1024) {
-			a %= b;
-			if (a % b == 0) {
-				zero = 1;
-				for (int i = 0; i < str.size(); ++i)
-					printf("%d", str[i]);
-				printf("(0)\n");
-				break;
-			}
+		memset(chk, 0, sizeof(chk));
+		int a, b; cin >> a >> b;
+		cout << a / b << '.';
+		a %= b;
+		int sa = a, sb = b;
+		string ans = "";
+		ans.reserve(2020);
+		while (1) {
 			a *= 10;
-			str.push_back(a / b);
-		}
-		if (zero) continue;
-		reverse(str.begin(), str.end());
-		pi = suf(str);
-		int len = 0;
-		for (int i = 1; i < pi.size() - 1; ++i) {
-			if (abs(pi[i] - pi[i - 1]) == abs(pi[i + 1] - pi[i])) {
-				len = abs(pi[i] - pi[i - 1]);
+			if (!d[sa][sb].empty()) {
+				ans = d[sa][sb];
 				break;
 			}
-		}
-		reverse(str.begin(), str.end());
-		for (int i = 0; i < str.size() - len; ++i) {
-			if (str[i] == str[i + len]) {
-				putchar('(');
-				int k = i + len;
-				while (i < k)
-					printf("%d", str[i++]);
-				printf(")\n");
+			if (a % b == 0) {
+				if (a / b)
+					ans.push_back(a / b + '0');
+				ans += "(0)";
+				d[sa][sb] = ans;
 				break;
 			}
-			else
-				printf("%d", str[i]);
+			else {
+				int idx = chk[a];
+				if (idx) {
+					ans.insert(ans.begin() + idx - 1, '(');
+					ans.push_back(')');
+					d[sa][sb] = ans;
+					break;
+				}
+				else {
+					chk[a] = ans.size() + 1;
+					ans.push_back(a / b + '0');
+					a %= b;
+				}
+			}
 		}
-		pi.clear();
+		cout << ans << '\n';
 	}
 }
