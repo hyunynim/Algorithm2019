@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="11571_분수를_소수로.cpp">
+    <ClCompile Include="15946_Make_Similar.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

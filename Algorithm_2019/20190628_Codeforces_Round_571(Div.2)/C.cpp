@@ -1,23 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
+int x[1010101];
 int main() {
-	string a, b;
-	cin >> a >> b;
-	int sz = a.size();
-	bitset<1000000> ba, bb;
-	for (int i = 0; i < a.size(); ++i) 
-		if (a[i] == '1')
-			ba.set(i);
-	
-	for (int i = 0; i < b.size(); ++i) 
-		if (b[i] == '1')
-			bb.set(i);
-	int ans = 0;
-	for (int i = 0; i < a.size() - b.size() + 1; ++i) {
-		int k = (ba ^ bb).count();
-		if (k % 2 == 0)
-			++ans;
-		bb <<= 1;
+	string s[2];
+	cin >> s[0] >> s[1];
+	int pre = 0, ans = 0, len = s[1].size();
+	for (int i = 0; i < s[0].size(); ++i) {
+		if (i < s[1].size())
+			pre ^= (s[1][i] - '0');
+		x[i + 1] = x[i] ^ (s[0][i] - '0');
 	}
+	for (int i = 0; i <= s[0].size() - len; ++i) 
+		if ((pre ^ (x[i + len] ^ x[i])) == 0)
+			++ans;
 	printf("%d", ans);
 }
