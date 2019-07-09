@@ -1,16 +1,2 @@
-﻿  11402_이항_계수_$.cpp
-d:\develop\algorithm_2019\algorithm_2019\11402_이항_계수_$.cpp(22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-d:\develop\algorithm_2019\algorithm_2019\11402_이항_계수_$.cpp(23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-d:\develop\algorithm_2019\algorithm_2019\11402_이항_계수_$.cpp(34): warning C4244: '인수': 'll'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-d:\develop\algorithm_2019\algorithm_2019\11402_이항_계수_$.cpp(38): warning C4244: '인수': 'll'에서 '_Ty'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-          with
-          [
-              _Ty=int
-          ]
-d:\develop\algorithm_2019\algorithm_2019\11402_이항_계수_$.cpp(42): warning C4244: '인수': 'll'에서 '_Ty'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-          with
-          [
-              _Ty=int
-          ]
-d:\develop\algorithm_2019\algorithm_2019\11402_이항_계수_$.cpp(45): warning C4244: '인수': 'll'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-LINK : fatal error LNK1104: 'D:\Develop\Algorithm_2019\Debug\Algorithm_2019.exe' 파일을 열 수 없습니다.
+﻿  11439_이항_계수_5.cpp
+  Algorithm_2019.vcxproj -> D:\Develop\Algorithm_2019\Debug\Algorithm_2019.exe
