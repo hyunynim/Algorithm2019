@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="20190717_Codeforces_Round_574(Div.2)\C.cpp" />
+    <ClCompile Include="20190721_Codeforces_Global_Round_4\A.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -120,6 +120,10 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <StackReserveSize>1024MB</StackReserveSize>
+      <StackCommitSize>1024MB</StackCommitSize>
+      <HeapReserveSize>1024MB</HeapReserveSize>
+      <HeapCommitSize>1024MB</HeapCommitSize>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
