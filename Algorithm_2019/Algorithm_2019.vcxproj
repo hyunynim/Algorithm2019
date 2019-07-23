@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="20190721_Codeforces_Global_Round_4\A.cpp" />
+    <ClCompile Include="20190722_Codeforces_Educational_Round_69(Div.2)\D.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
