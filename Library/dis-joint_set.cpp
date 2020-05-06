@@ -4,16 +4,14 @@
 #include<algorithm>
 #include<string>
 #include<unordered_map>
-#define MAX_SIZE 101
 using namespace std;
-
 struct DISJOINT {
 	vector<int> p;
 	vector<int> sz;
-	DISJOINT() {
-		p.resize(MAX_SIZE);
-		sz.resize(MAX_SIZE);
-		for (int i = 0; i < MAX_SIZE; ++i) {
+	DISJOINT(int n) {
+		p.resize(n + 1);
+		sz.resize(n + 1);
+		for (int i = 0; i < n + 1; ++i) {
 			p[i] = i;
 			sz[i] = 1;
 		}

@@ -13,7 +13,7 @@ int n, m, w, dist[512];
 bool canGo = 1;
 
 void BellmanFord(int s) {
-	for (int i = s; i <= n; ++i) {
+	for (int i = 1; i <= n; ++i) {
 		for (int j = 0; j < edge.size(); ++j) {
 			int from, to, w;
 			tie(from, to, w) = edge[j];

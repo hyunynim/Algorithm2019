@@ -19,7 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="20191113_Codeforces_Educational_Round_76(Div.2)\D.cpp" />
+    <ClCompile Include="goorm\MakeTree.cpp" />
+    <ClCompile Include="goorm\하모니2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="goorm\hd.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -97,12 +101,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
+      <SDLCheck>false</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <StackReserveSize>
-      </StackReserveSize>
+      <StackReserveSize>128</StackReserveSize>
     </Link>
     <Link>
       <StackCommitSize>
@@ -149,8 +152,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <StackReserveSize>
-      </StackReserveSize>
+      <StackReserveSize>128</StackReserveSize>
       <StackCommitSize>
       </StackCommitSize>
       <HeapReserveSize>
